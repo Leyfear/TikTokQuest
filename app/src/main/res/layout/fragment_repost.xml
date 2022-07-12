@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.repost.RepostFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#7487ff"
+        android:src="@drawable/ic_add"
+        app:fabCustomSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="45dp"
+        app:tint="@color/white" />
+
+    <ImageView
+        android:id="@+id/repostImage"
+        android:layout_marginTop="75dp"
+        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_height="220dp"
+        android:src="@drawable/sonimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/settingsIcon"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:fontFamily="@font/myfont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:textColor="#2B2929"
+        android:text="Repost"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/repostImage"
+        app:layout_constraintStart_toStartOf="@+id/repostImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/repostHeadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/myfont"
+        android:text="There is no Repost yet!"
+       android:textColor="#3A3838"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/repostImage"
+        app:layout_constraintTop_toBottomOf="@id/repostImage" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/repostText1"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/myfont"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/repostHeadText"
+        android:text="I. Copy link to repost."
+
+        app:layout_constraintStart_toStartOf="@id/repostImage"
+        android:textSize="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/repostText2"
+        android:fontFamily="@font/myfont"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/repostText1"
+        android:text="II. Push + button"
+
+        app:layout_constraintStart_toStartOf="@id/repostImage"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/repostText3"
+        android:fontFamily="@font/myfont"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/repostText2"
+        android:text="III. Paste Link"
+        app:layout_constraintStart_toStartOf="@id/repostImage"
+        android:textSize="15dp" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

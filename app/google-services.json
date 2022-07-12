@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "498522096612",
+    "project_id": "tiktok-repost-357f6",
+    "storage_bucket": "tiktok-repost-357f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498522096612:android:3ca68122c4d0a554e3fdf1",
+        "android_client_info": {
+          "package_name": "com.example.tiktokrepost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498522096612-ikqe41gd8g4oi41soi5q3e2ktp6pakbt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tiktokrepost",
+            "certificate_hash": "13e5e4b76ed2e86335d6782d7b3f0c068fbd1be1"
+          }
+        },
+        {
+          "client_id": "498522096612-bb41e0jplmee5k8221ata3faunt891k3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVGUpESd7pLvOeA3Xg4rxjk2JQWfl7-II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498522096612-bb41e0jplmee5k8221ata3faunt891k3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
