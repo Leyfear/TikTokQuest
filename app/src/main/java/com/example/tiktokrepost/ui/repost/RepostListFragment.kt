@@ -23,14 +23,9 @@ import com.example.tiktokrepost.R
 import com.example.tiktokrepost.adapter.VideoAdapter
 import com.example.tiktokrepost.databinding.FragmentRepostListBinding
 import com.example.tiktokrepost.db.VideoResponse
-import com.example.tiktokrepost.network.ResponseModel
 import com.example.tiktokrepost.network.URL
 import com.example.tiktokrepost.uitel.SheetDialog
 import com.example.tiktokrepost.viewmodel.ReposViewModel
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
@@ -39,6 +34,7 @@ import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 class RepostListFragment : Fragment() {
     private lateinit var binding : FragmentRepostListBinding
     private lateinit var sheedDialog: SheetDialog
+    var onItemClickDelAll: ((List<VideoResponse>) -> Unit)?= null
     private var list : List<VideoResponse>? = null
     private lateinit var next : TextView
     private lateinit var button: ImageView
@@ -91,6 +87,10 @@ class RepostListFragment : Fragment() {
         }
         binding.apply {
             deleteIcon.setOnClickListener {
+                if(list?.size != 0){
+                    val currentlist =videoAdapter.differ.currentList
+                    onItemClickDelAll?.invoke(currentlist)
+                }
                 if(list?.size == postArrayList.size ){
                     isThereData()
                     findNavController().navigate(R.id.action_repostListFragment_to_repostFragment)
@@ -101,10 +101,12 @@ class RepostListFragment : Fragment() {
                     }
                     postArrayList.clear()
                 }
+
             }
         }
 
         videoAdapter.onItemLongClickAdd = {
+            println(it.videoId)
             postArrayList.add(it)
         }
         videoAdapter.onItemClick = {
@@ -116,6 +118,7 @@ class RepostListFragment : Fragment() {
 
 
         videoAdapter.onItemLongClickDelete = {
+            println(it.videoId)
             postArrayList.remove(it)
         }
 

@@ -8,12 +8,7 @@ import com.example.tiktokrepost.model.VideoInf
 import com.example.tiktokrepost.db.VideoResponse
 import com.example.tiktokrepost.network.ResponseModel
 import com.example.tiktokrepost.repository.DataRepository
-import com.google.firebase.Timestamp
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
